@@ -52,6 +52,11 @@ function promptUser(){
     ]);
 }
 
+function generateMD(answers){
+    return `
+    `
+}
+
 promptUser()
     .then(function(answers){
         console.log(answers);
