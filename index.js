@@ -4,6 +4,7 @@ const util = require("util");
 
 const writeFileAsync = util.promisify(fs.writeFile);
 
+// Function to gather user information through command line prompts
 function promptUser(){
     return inquirer.prompt([
         {
@@ -57,9 +58,9 @@ function promptUser(){
     ]);
 }
 
+// Function to dynamically generate readme with user inputs
 function generateReadMe(answers){
     return `
-
 ![GitHub Repo stars](https://img.shields.io/github/stars/${answers.username}/${answers.repo}?style=social)
 ![GitHub forks](https://img.shields.io/github/forks/${answers.username}/${answers.repo}?style=social)
 
@@ -96,6 +97,7 @@ If you have any questions about this repository, open an issue or contact me dir
 `;
 }
 
+// Calling functions using promises to prompt users for information & create README file
 promptUser()
     .then(function(answers){
         const readMe = generateReadMe(answers);
