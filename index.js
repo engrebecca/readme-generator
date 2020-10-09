@@ -34,7 +34,7 @@ function promptUser(){
         {
             type: "input",
             message: "What command should be run to install dependencies?",
-            name: "installCommand"
+            name: "install"
         },
         {
             type: "input",
@@ -47,17 +47,58 @@ function promptUser(){
         },    {
             type: "input",
             message: "What does the user need to know about contributing to the repo?",
-            name: "contributing"
+            name: "contribute"
         }
     ]);
 }
 
-function generateMD(answers){
+function generateReadMe(answers){
     return `
-    `
+# ${answers.project}
+
+## Description
+${answers.description}
+
+## Table of Contents
+* [Installation](#installation)
+* [Usage](#usage)
+* [License](#license)
+* [Badges](#badges)
+* [Contributing](#contributing)
+* [Tests](#tests)
+* [Questions](#questions)
+
+## Installation
+${answers.install}
+
+## Usage
+${answers.usage}
+
+## License
+${answers.license}
+
+## Badges
+${answers.license}
+
+## Contributing
+${answers.contribute}
+
+## Tests
+${answers.test}
+
+## Questions
+If you have any questions about this repository, open an issue or contact me directly at <${answers.email}>. You can find more of my work at [${answers.username}](https://github.com/${answers.username}).
+`;
 }
 
 promptUser()
     .then(function(answers){
-        console.log(answers);
+        const readMe = generateReadMe(answers);
+        return writeFileAsync("README.md", readMe);
+    })
+    .then(function(){
+        console.log("Writing README");
+    })
+    .catch(function(err){
+        console.log(err);
     });
