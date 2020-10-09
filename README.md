@@ -12,6 +12,7 @@ The README Generator allows developers to automatically create a README file thr
 * [License](#license)
 * [Contributing](#contributing)
 * [Tests](#tests)
+* [Credits](#credits)
 * [Questions](#questions)
 
 ## Installation
