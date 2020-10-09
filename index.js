@@ -78,7 +78,7 @@ ${answers.usage}
 ${answers.license}
 
 ## Badges
-${answers.license}
+![GitHub Repo stars](https://img.shields.io/github/stars/${answers.username}/${answers.project}?style=social)
 
 ## Contributing
 ${answers.contribute}
