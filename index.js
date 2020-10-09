@@ -18,8 +18,13 @@ function promptUser(){
         },
         {
             type: "input",
-            message: "What is the name of your project?",
-            name: "project"
+            message: "What is the title of your project?",
+            name: "title"
+        },
+        {
+            type: "input",
+            message: "What is the name of your repo?",
+            name: "repo"
         },
         {
             type: "input",
@@ -54,7 +59,11 @@ function promptUser(){
 
 function generateReadMe(answers){
     return `
-# ${answers.project}
+
+![GitHub Repo stars](https://img.shields.io/github/stars/${answers.username}/${answers.repo}?style=social)
+![GitHub forks](https://img.shields.io/github/forks/${answers.username}/${answers.repo}?style=social)
+
+# ${answers.title}
 
 ## Description
 ${answers.description}
@@ -63,31 +72,27 @@ ${answers.description}
 * [Installation](#installation)
 * [Usage](#usage)
 * [License](#license)
-* [Badges](#badges)
 * [Contributing](#contributing)
 * [Tests](#tests)
 * [Questions](#questions)
 
 ## Installation
-${answers.install}
+    ${answers.install}
 
 ## Usage
 ${answers.usage}
 
 ## License
-${answers.license}
-
-## Badges
-![GitHub Repo stars](https://img.shields.io/github/stars/${answers.username}/${answers.project}?style=social)
+This project is licensed under the ${answers.license} license.
 
 ## Contributing
 ${answers.contribute}
 
 ## Tests
-${answers.test}
+    ${answers.runTest}
 
 ## Questions
-If you have any questions about this repository, open an issue or contact me directly at <${answers.email}>. You can find more of my work at [${answers.username}](https://github.com/${answers.username}).
+If you have any questions about this repository, open an issue or contact me directly at <${answers.email}>. You can find more of my work on my GitHub [${answers.username}](https://github.com/${answers.username}).
 `;
 }
 
