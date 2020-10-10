@@ -1,5 +1,6 @@
 ![GitHub Repo stars](https://img.shields.io/github/stars/engrebecca/readme-generator?style=social)
 ![GitHub forks](https://img.shields.io/github/forks/engrebecca/readme-generator?style=social)
+![GitHub](https://img.shields.io/github/license/engrebecca/readme-generator)
 
 # README Generator
 
@@ -9,6 +10,8 @@ The README Generator allows developers to automatically create a README file thr
 ## Table of Contents
 * [Installation](#installation)
 * [Usage](#usage)
+* [Built With](#built-with)
+* [Sample Images](#sample-images)
 * [License](#license)
 * [Contributing](#contributing)
 * [Tests](#tests)
@@ -35,7 +38,7 @@ This program utilizes the Inquirer package. To install necessary dependencies, r
 * [Git](https://git-scm.com/) - version control system to track changes in source code
 * [GitHub](https://github.com/) - hosts repository and deploys page on GitHub
 
-## Sample Result Pictures
+## Sample Images
 A sample markdown file that is generated
 ![Sample Image](assets/markdown.png)
 
@@ -51,10 +54,12 @@ If you are interested in contributing to this repository, please contact me at t
 ## Tests
 To run tests, run the following command:
 
-    npm test
+    npm run test
 
 ## Credits
 * Badges from [ShieldsIO](https://shields.io/)
 
 ## Questions
+![engrebecca avatar](https://github.com/engrebecca.png?size=40)
+
 If you have any questions about this repository, please open an issue or contact me directly at <reng412@gmail.com> or on [LinkedIn](https://www.linkedin.com/in/engrebecca/). You can find more of my work on my GitHub [engrebecca](https://github.com/engrebecca).

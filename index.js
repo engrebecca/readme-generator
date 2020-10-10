@@ -63,6 +63,7 @@ function generateReadMe(answers){
     return `
 ![GitHub Repo stars](https://img.shields.io/github/stars/${answers.username}/${answers.repo}?style=social)
 ![GitHub forks](https://img.shields.io/github/forks/${answers.username}/${answers.repo}?style=social)
+![GitHub](https://img.shields.io/github/license/${answers.username}/${answers.repo})
 
 # ${answers.title}
 
@@ -78,6 +79,8 @@ ${answers.description}
 * [Questions](#questions)
 
 ## Installation
+To install necessary dependencies, run the following in command line:
+
     ${answers.install}
 
 ## Usage
@@ -90,9 +93,13 @@ This project is licensed under the ${answers.license} license.
 ${answers.contribute}
 
 ## Tests
+To run tests, run the following command:
+
     ${answers.runTest}
 
 ## Questions
+![${answers.username} avatar](https://github.com/${answers.username}.png?size=40)
+
 If you have any questions about this repository, open an issue or contact me directly at <${answers.email}>. You can find more of my work on my GitHub [${answers.username}](https://github.com/${answers.username}).
 `;
 }
